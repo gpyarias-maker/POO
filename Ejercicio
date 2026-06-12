@@ -1,0 +1,21 @@
+class Dispositivo:
+    def __init__(self, marca):
+        self._marca = marca
+
+    def encender(self):
+        print("El dispositivo se enciende")
+
+class Smartphone(Dispositivo):
+    def encender(self):
+        print(f"El teléfono {self._marca} vibra y muestra el logo en la pantalla")
+
+class Laptop(Dispositivo):
+    def encender(self):
+        print(f"La computadora {self._marca} suena 'Bip' y arranca el sistema")
+
+# Probamos el código
+d1 = Smartphone("Samsung")
+d2 = Laptop("Lenovo")
+
+d1.encender()
+d2.encender()
