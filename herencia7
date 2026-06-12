@@ -1,0 +1,20 @@
+class Archivo:
+    def __init__(self, nombre):
+        self._nombre = nombre
+
+    def abrir(self):
+        print("Abriendo archivo")
+
+class DocumentoTexto(Archivo):
+    def abrir(self):
+        print(f"Abriendo el archivo {self._nombre}.txt en el bloc de notas")
+
+class ArchivoMusica(Archivo):
+    def abrir(self):
+        print(f"Reproduciendo la canción {self._nombre}.mp3 en el reproductor")
+
+a1 = DocumentoTexto("notas_reunion")
+a2 = ArchivoMusica("mi_cancion_favorita")
+
+a1.abrir()
+a2.abrir()
