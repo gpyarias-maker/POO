@@ -1,0 +1,20 @@
+class Figura:
+    def __init__(self, color):
+        self._color = color
+
+    def dibujar(self):
+        print("Se dibuja una figura genérica")
+
+class Cuadrado(Figura):
+    def dibujar(self):
+        print(f"Se dibuja un cuadrado de color {self._color}")
+
+class Triangulo(Figura):
+    def dibujar(self):
+        print(f"Se dibuja un triángulo de color {self._color}")
+
+c = Cuadrado("Azul")
+t = Triangulo("Rojo")
+
+c.dibujar()
+t.dibujar()
