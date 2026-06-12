@@ -1,0 +1,20 @@
+class Vehiculo:
+    def __init__(self, marca):
+        self._marca = marca 
+
+    def mover(self):
+        print("El vehículo se está moviendo")
+
+class Auto(Vehiculo):
+    def mover(self):
+        print(f"El auto {self._marca} avanza sobre 4 ruedas")
+
+class Moto(Vehiculo):
+    def mover(self):
+        print(f"La moto {self._marca} avanza sobre 2 ruedas")
+
+a = Auto("Toyota")
+m = Moto("Yamaha")
+
+a.mover()
+m.mover()
