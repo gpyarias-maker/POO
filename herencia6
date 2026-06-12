@@ -1,0 +1,20 @@
+class Electrodomestico:
+    def __init__(self, marca):
+        self._marca = marca
+
+    def cocinar(self):
+        print("El electrodoméstico está encendido")
+
+class Microondas(Electrodomestico):
+    def cocinar(self):
+        print(f"El microondas {self._marca} calienta la comida con ondas de calor")
+
+class Cafetera(Electrodomestico):
+    def cocinar(self):
+        print(f"La cafetera {self._marca} gotea agua caliente sobre el café")
+
+e1 = Microondas("LG")
+e2 = Cafetera("Oster")
+
+e1.cocinar()
+e2.cocinar()
