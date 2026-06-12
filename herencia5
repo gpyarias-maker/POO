@@ -1,0 +1,20 @@
+class Notificacion:
+    def __init__(self, mensaje):
+        self._mensaje = mensaje
+
+    def enviar(self):
+        print("Enviando una notificación genérica")
+
+class MensajeTexto(Notificacion):
+    def enviar(self):
+        print(f"Enviando SMS al teléfono: {self._mensaje}")
+
+class CorreoElectronico(Notificacion):
+    def enviar(self):
+        print(f"Enviando Email con asunto urgente: {self._mensaje}")
+
+n1 = MensajeTexto("Tu código de verificación es 1234")
+n2 = CorreoElectronico("Tu estado de cuenta está listo")
+
+n1.enviar()
+n2.enviar()
